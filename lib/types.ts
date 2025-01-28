@@ -50,5 +50,4 @@ export interface Uiautomator2SessionCaps
 export interface Uiautomator2Settings extends BaseSettings {
   ignoreUnimportantViews: boolean;
   allowInvisibleElements: boolean;
-  newMaskingRules: (string | LogFilter)[] | undefined;
 }
