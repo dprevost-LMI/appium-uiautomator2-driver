@@ -304,10 +304,9 @@ class AndroidUiautomator2Driver
     this.jwpProxyAvoid = NO_PROXY;
     this._originalIme = null;
 
-    this.settings = new DeviceSettings(
-      {ignoreUnimportantViews: false, allowInvisibleElements: false},
-      this.onSettingsUpdate.bind(this)
-    );
+    this.settings = 
+    this.registerDeviceSettings(new DeviceSettings({ignoreUnimportantViews: false, allowInvisibleElements: false},this.onSettingsUpdate));
+    
     // handle webview mechanics from AndroidDriver
     this.sessionChromedrivers = {};
 

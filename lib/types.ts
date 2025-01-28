@@ -1,4 +1,4 @@
-import type {DriverCaps, DriverOpts, W3CDriverCaps} from '@appium/types';
+import type {DriverCaps, DriverOpts, LogFilter, W3CDriverCaps, BaseSettings} from '@appium/types';
 import type {EmptyObject} from 'type-fest';
 import type {RelativeRect} from './commands/types';
 import type {Uiautomator2Constraints} from './constraints';
@@ -47,7 +47,8 @@ export interface Uiautomator2SessionCaps
     Uiautomator2SessionInfo,
     Partial<Uiautomator2DeviceDetails> {}
 
-export interface Uiautomator2Settings {
+export interface Uiautomator2Settings extends BaseSettings {
   ignoreUnimportantViews: boolean;
   allowInvisibleElements: boolean;
+  newMaskingRules: (string | LogFilter)[] | undefined;
 }
